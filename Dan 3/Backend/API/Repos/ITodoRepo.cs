@@ -15,5 +15,7 @@ namespace API.Repos
         Task<Todo> GetTodoByIdAsync(int id);
 
         Task<bool> UpdateTodoByIdAsync(int id, Todo todo);
+
+        Task<bool> DeleteTodoByIdAsync(int id);
     }
 }

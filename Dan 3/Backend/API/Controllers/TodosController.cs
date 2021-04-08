@@ -57,5 +57,24 @@ namespace API.Controllers
 
             return NoContent();
         }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteTodoAsync(int id)
+        {
+            try
+            {
+                var result = await _service.DeleteTodoByIdAsync(id);
+                if (!result)
+                {
+                    return BadRequest("Todo could not be deleted");
+                }
+
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                return BadRequest(e.Message);
+            }
+        }
     }
 }

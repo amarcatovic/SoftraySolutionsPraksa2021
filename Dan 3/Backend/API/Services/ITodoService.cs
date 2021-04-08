@@ -16,5 +16,7 @@ namespace API.Services
         Task<TodoReadDto> GetTodoByIdAsync(int id);
 
         Task<bool> UpdateTodoByIdAsync(int id, TodoUpdateDto todoUpdateDto);
+
+        Task<bool> DeleteTodoByIdAsync(int id);
     }
 }

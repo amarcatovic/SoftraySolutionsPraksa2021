@@ -50,5 +50,10 @@ namespace API.Services
 
             return await _repo.UpdateTodoByIdAsync(id, todo);
         }
+
+        public async Task<bool> DeleteTodoByIdAsync(int id)
+        {
+            return await _repo.DeleteTodoByIdAsync(id);
+        }
     }
 }

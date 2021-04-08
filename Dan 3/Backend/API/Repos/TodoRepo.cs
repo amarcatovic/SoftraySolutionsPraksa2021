@@ -58,5 +58,13 @@ namespace API.Repos
 
             return await _context.SaveChangesAsync() >= 0;
         }
+
+        public async Task<bool> DeleteTodoByIdAsync(int id)
+        {
+            var todoFromDb = await GetTodoByIdAsync(id);
+            todoFromDb.IsDeleted = true;
+
+            return await _context.SaveChangesAsync() >= 0;
+        }
     }
 }
