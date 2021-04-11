@@ -9,7 +9,7 @@ namespace API.Services
 {
     public interface ITodoService
     {
-        Task<IEnumerable<Todo>> GetTodosAsync();
+        Task<IEnumerable<TodoReadDto>> GetTodosAsync();
 
         Task AddTodoAsync(TodoCreateDto todoCreateDto);
 

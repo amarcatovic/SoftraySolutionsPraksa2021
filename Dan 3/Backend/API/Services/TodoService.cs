@@ -20,9 +20,11 @@ namespace API.Services
             _mapper = mapper;
         }
 
-        public async Task<IEnumerable<Todo>> GetTodosAsync()
+        public async Task<IEnumerable<TodoReadDto>> GetTodosAsync()
         {
-            return await _repo.GetTodosAsync();
+            var result = await _repo.GetTodosAsync();
+
+            return _mapper.Map<IEnumerable<TodoReadDto>>(result);
         }
 
         public async Task AddTodoAsync(TodoCreateDto todoCreateDto)
