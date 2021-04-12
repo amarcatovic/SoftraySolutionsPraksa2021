@@ -1,0 +1,12 @@
+<div class="container">
+  
+    <h1>{{title}}</h1>
+    
+    <button type="button" class="btn btn-danger" (click)="povecajBrojac()">Klikni me</button>
+  
+    <h3 *ngIf="brojac > 0">Dugme je kliknuto {{brojac}} puta</h3>
+
+    <ul>
+        <li *ngFor="let objekat of brojevi">{{objekat.slovima}} : {{objekat.broj}}</li>
+    </ul>
+</div>
