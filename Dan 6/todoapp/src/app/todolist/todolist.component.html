@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="card" *ngFor="let todo of todos">
+        <div class="card-body">
+         {{todo.title}}
+         <br>
+         Created at: {{todo.createdAt | date}}
+        </div>
+    </div>
+</div>
+
+<br>
+<br>
+<b>{{ 1234.10434324324324324 | number: '4.3' }}</b>
